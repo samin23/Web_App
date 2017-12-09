@@ -46,13 +46,11 @@ class NewEntry extends Component {
   savestate(){
     //console.log(this.state)
     this.showAlert();
-    fetch("https://crossorigin.me/http://165.227.123.227:4001/api/code", {
+    fetch("http://165.227.123.227:4001/api/code", {
       method: "POST",
-      mode: 'no-cors',
-      headers: {
-        Accept: "application/json",
+        headers: {
         "Content-Type": "application/json"
-      },
+        },
       body: JSON.stringify({
         firebaseID: FireVar.auth().currentUser.uid,
         language: this.state.text3,
