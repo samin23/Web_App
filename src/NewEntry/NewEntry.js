@@ -48,9 +48,10 @@ class NewEntry extends Component {
     this.showAlert();
     fetch("http://165.227.123.227:4001/api/code", {
       method: "POST",
-        headers: {
+      headers: {
+        Accept: "application/json",
         "Content-Type": "application/json"
-        },
+      },
       body: JSON.stringify({
         firebaseID: FireVar.auth().currentUser.uid,
         language: this.state.text3,
@@ -131,7 +132,7 @@ class NewEntry extends Component {
               <option value="react">React</option>
           </select>
           <h3 className='inputheader'>Code:</h3>
-          <div>
+          <div className='codes'>
             <textarea
               className='entryInputClass'
               onChange={this.codeInputChangeHandler}
@@ -141,7 +142,6 @@ class NewEntry extends Component {
               cols='70'
               >
             </textarea>
-          <div className='codes'>
             <SyntaxHighlighter language={this.state.text3} style={tomorrowNightEighties}>{this.state.text1}</SyntaxHighlighter>
           </div>
           <h3 className='inputheader'>Comments:</h3>
@@ -158,6 +158,12 @@ class NewEntry extends Component {
   }
 }
 
+NewEntry.propTypes = {
+    text: PropTypes.string,
+    text1: PropTypes.string,
+    text2: PropTypes.string,
+    text3: PropTypes.string
+};
 
 
 export default NewEntry
