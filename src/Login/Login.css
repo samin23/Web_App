@@ -1,0 +1,32 @@
+.login-body{
+ background-color: #2F2F2F;
+ height:100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.title{
+  color: white;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loginButtons{
+  display: flex;
+  flex-direction: row;
+}
+
+.inputClass{
+  padding: 20px 0 20px 0;
+  border-radius: 10px;
+}
+
+.loginButtonL{
+  padding: 0 10px 0 10px;
+}

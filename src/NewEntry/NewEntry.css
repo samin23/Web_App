@@ -1,0 +1,35 @@
+.title{
+  color: white;
+  border-bottom: green 4px solid;
+}
+.mustLogIn{
+  background-color: #2F2F2F;
+  height:100vh;
+}
+
+.NewEntry{
+  background-color: #2F2F2F;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputheader{
+  color: white;
+}
+
+.language{
+  border-radius: 5px;
+}
+textarea{
+  resize:vertical;
+}
+.entryInputClass{
+  border-radius: 10px;
+}
+.codes{
+  display: flex;
+  flex-direction: row;
+}
