@@ -46,7 +46,7 @@ class NewEntry extends Component {
   savestate(){
     //console.log(this.state)
     this.showAlert();
-    fetch("http://165.227.123.227:4001/api/code", {
+    fetch("//165.227.123.227:4001/api/code", {
       method: "POST",
       headers: {
         Accept: "application/json",
