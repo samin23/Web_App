@@ -48,7 +48,7 @@ class NewEntry extends Component {
     this.showAlert();
     fetch("https://crossorigin.me/http://165.227.123.227:4001/api/code", {
       method: "POST",
-      mode: 'cors',
+      mode: 'no-cors',
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
