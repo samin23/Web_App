@@ -132,7 +132,7 @@ class NewEntry extends Component {
               <option value="react">React</option>
           </select>
           <h3 className='inputheader'>Code:</h3>
-          <div className='codes'>
+
             <textarea
               className='entryInputClass'
               onChange={this.codeInputChangeHandler}
@@ -142,6 +142,7 @@ class NewEntry extends Component {
               cols='70'
               >
             </textarea>
+          <div className='codes'>
             <SyntaxHighlighter language={this.state.text3} style={tomorrowNightEighties}>{this.state.text1}</SyntaxHighlighter>
           </div>
           <h3 className='inputheader'>Comments:</h3>
