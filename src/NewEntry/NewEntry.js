@@ -158,12 +158,6 @@ class NewEntry extends Component {
   }
 }
 
-NewEntry.propTypes = {
-    text: PropTypes.string,
-    text1: PropTypes.string,
-    text2: PropTypes.string,
-    text3: PropTypes.string
-};
 
 
 export default NewEntry
