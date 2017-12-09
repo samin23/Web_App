@@ -27,6 +27,7 @@ class NewEntry extends Component {
     this.codeInputChangeHandler = this.codeInputChangeHandler.bind(this);
     this.commentsInputChangeHandler = this.commentsInputChangeHandler.bind(this);
     this.languageInputChangeHandler = this.languageInputChangeHandler.bind(this);
+    this.add = this.add.bind(this);
   }
   alertOptions = {
     offset: 14,
@@ -89,6 +90,22 @@ class NewEntry extends Component {
     this.setState({ text3: event.target.value});
     //console.log(this.state);
   }
+  add(event){
+    if (event.keyCode === 9) { // tab was pressed
+        console.log(this.state);
+        event.preventDefault();
+        var val = this.state.text1,
+          start = event.target.selectionStart,
+          end = event.target.selectionEnd;
+          this.setState(
+              {
+                  text1: val.substring(0, start) + '\t' + val.substring(end)
+              },
+              () => {
+                //  this.refs.input.selectionStart = this.refs.input.selectionEnd = start + 1
+              });
+      }
+  }
 
 
   render(){
@@ -119,6 +136,7 @@ class NewEntry extends Component {
             <textarea
               className='entryInputClass'
               onChange={this.codeInputChangeHandler}
+              onKeyDown={this.add}
               value={this.state.text1}
               rows='10'
               cols='70'
